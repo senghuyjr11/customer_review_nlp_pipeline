@@ -50,7 +50,13 @@ This project follows **Clean Architecture**:
     python -m spacy download en_core_web_sm
     ```
 
-5. **Run the application**:
+5. **Download Glove**:
+    ```bash
+    https://nlp.stanford.edu/projects/glove/
+   # extract the file and paste file .txt
+    ```
+
+6. **Run the application**:
     ```bash
     python run.py
     ```
