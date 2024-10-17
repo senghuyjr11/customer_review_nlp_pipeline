@@ -136,9 +136,10 @@ customer_review_nlp_pipeline/
 ├── app/
 │   ├── adapters/
 │   │   └── controllers/
-│   │       └── nlp_pipeline_controller.py   # Main controller for NLP operations
+│   │       ├── nlp_pipeline_controller.py          # Main controller for NLP Review Pipeline
+│   │       └── text_representation_controller.py   # Main controller for NLP Text Representation
 │   ├── interfaces/
-│   │   └── api.py                           # API routes
+│   │   └── api.py                                  # API routes
 │   ├── use_cases/
 │   │   ├── text_representation/
 │   │   │   ├── one_hot_encoding.py
@@ -150,6 +151,6 @@ customer_review_nlp_pipeline/
 │   │       ├── sentiment_analysis.py
 │   │       └── text_summarization.py
 │
-├── run.py                                    # Main entry point for running the app
-├── requirements.txt                          # Python dependencies
-└── README.md                                 # This file
+├── run.py                                          # Main entry point for running the app
+├── requirements.txt                                # Python dependencies
+└── README.md                                       # This file
