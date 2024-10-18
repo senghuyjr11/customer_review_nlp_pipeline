@@ -18,7 +18,7 @@ This project follows **Clean Architecture**:
 - **Entities (Business Logic)**: Core NLP functions (e.g., text representation, sentiment analysis).
 - **Use Cases**: Handlers for applying different NLP techniques.
 - **Controllers**: Interfaces between the API and the use cases.
-- **Frameworks**: Flask-based API for exposing endpoints.
+- **Frameworks**: FastAPI for exposing endpoints.
 
 ## Installation
 

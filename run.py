@@ -1,5 +1,7 @@
-from app.interfaces.api import app
-
+import subprocess
 if __name__ == "__main__":
-    # Run the Flask app
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    # Command to run `fastapi dev app/interfaces/api.py`
+    command = ["fastapi", "dev", "app/interfaces/api.py"]
+
+    # Call the command using subprocess
+    subprocess.run(command)
