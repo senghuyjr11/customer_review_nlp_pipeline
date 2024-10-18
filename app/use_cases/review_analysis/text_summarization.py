@@ -1,9 +1,14 @@
 from transformers import pipeline
+import torch
+
 
 class TextSummarization:
     def __init__(self):
-        # Load a pre-trained summarization model (BART)
-        self.summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+        # Check if a GPU is available, and if so, set device=0 (for the first GPU)
+        device = 0 if torch.cuda.is_available() else -1
+
+        # Load a pre-trained summarization model (BART) on the GPU if available
+        self.summarizer = pipeline("summarization", model="facebook/bart-large-cnn", device=device)
 
     def summarize_text(self, text, max_length=130, min_length=30, do_sample=False):
         """

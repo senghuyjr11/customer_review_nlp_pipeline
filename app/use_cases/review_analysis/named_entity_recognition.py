@@ -1,10 +1,16 @@
 import spacy
-
+import torch
 
 class NamedEntityRecognition:
     def __init__(self):
-        # Load the English NLP model
-        self.nlp = spacy.load('en_core_web_sm')
+        # Check if GPU is available and load the appropriate model
+        try:
+            if torch.cuda.is_available():
+                self.nlp = spacy.load('en_core_web_trf')  # Transformer-based model for GPU
+            else:
+                self.nlp = spacy.load('en_core_web_sm')   # CPU-based small model
+        except OSError:
+            self.nlp = spacy.load('en_core_web_sm')       # Fallback to small model
 
     def extract_entities(self, text):
         """
