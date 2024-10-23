@@ -1,7 +1,5 @@
-import subprocess
-if __name__ == "__main__":
-    # Command to run `fastapi dev app/interfaces/api.py`
-    command = ["fastapi", "dev", "app/interfaces/api.py"]
+import uvicorn
 
-    # Call the command using subprocess
-    subprocess.run(command)
+if __name__ == "__main__":
+    # This will run the FastAPI app at the given path
+    uvicorn.run("app.interfaces.api:app", host="127.0.0.1", port=8000, reload=True)

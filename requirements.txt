@@ -1,16 +1,22 @@
 #all of these dependencies for Python 3.12.0
 fastapi~=0.115.2
 pydantic~=2.9.2
-torch~=2.5.0+cu118
+torch~=2.5.0
 TextBlob~=0.18.0
 transformers~=4.45.2
 spacy~=3.8.2
 gensim~=4.3.2
 numpy~=1.26.4
 scikit-learn~=1.5.2
+pip~=24.2
+pillow~=10.2.0
+Jinja2~=3.1.4
+filelock~=3.16.1
+uvicorn~=0.32.0
 
 #python -m spacy download en_core_web_sm
+#python -m spacy download en_core_web_trf
 #python -m textblob.download_corpora
 #install PyTorch
     #For CPU-only (no GPU support): pip install torch
-    #For GPU Support (CUDA): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    #For GPU Support (CUDA): pip install torch torchvision torchaudio

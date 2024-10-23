@@ -48,6 +48,14 @@ This project follows **Clean Architecture**:
 4. **Download the required NLP models**:
     ```bash
     python -m spacy download en_core_web_sm
+    python -m spacy download en_core_web_sm
+    python -m spacy download en_core_web_trf
+    python -m textblob.download_corpora
+    #install PyTorch
+    #For CPU-only (no GPU support): 
+      pip install torch
+    #For GPU Support (CUDA): 
+      pip install torch torchvision torchaudio
     ```
 
 5. **Download Glove**:
